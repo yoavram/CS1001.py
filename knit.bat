@@ -1,2 +1,2 @@
-..\nbconvert\nbconvert.py  -f markdown recitation1.ipynb
-pandoc recitation1.md -o recitation1.pdf -s -S
+..\nbconvert\nbconvert.py  -f latex recitation1.ipynb
+pandoc recitation1.tex -o recitation1.pdf -s -S
