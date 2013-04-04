@@ -1,0 +1,1 @@
+C:\Python32\Scripts\ipython3.exe notebook --pylab=inline --ipython-dir=.
