@@ -1,29 +1,34 @@
 class Matrix:
-    """
-    Represents a rectangular matrix with n rows and m columns.
-    """
-
-    def __init__(self, n, m, val=0):
-        """
-        Create an n-by-m matrix of val's.
-        Inner representation: list of lists (rows)
-        """
-        assert n > 0 and m > 0
-        #self.rows = [[val]*m]*n #why this is bad?
-        self.rows = [[val]*m for i in range(n)]
-
+    
+    def __init__(self, n_rows, m_cols, default_value=0):
+        '''n_rows is number of rows, ...'''
+        assert isinstance(n_rows, int) and isinstance(m_cols,int) 
+        assert n_rows > 0 and m_cols > 0
+        self.rows = [[default_value for j in range(m_cols) ] for i in range(n_rows)]
+            
     def dim(self):
+        '''return tuple -> num of rows, num of cols'''
         return len(self.rows), len(self.rows[0])
-
+    
     def __repr__(self):
-        return "<Matrix {}>".format(self.rows)
-
+        return '<Matrix %d,%d>: \n' % self.dim() + str(self.rows[0][:min(5,self.dim()[1])])
+    
     def __eq__(self, other):
-        return isinstance(other, Matrix) and self.rows == other.rows
-
-    # cell/sub-matrix access/assignment
-    ####################################
-    def __getitem__(self, ij): #ij is a tuple (i,j). Allows m[i,j] instead m[i][j]
+        assert isinstance(other, Matrix)
+        if self.dim() != other.dim(): 
+            return False
+        n,m = self.dim()
+        for i in range(n):
+            for j in range(m):
+                if self[i,j] != other[i,j]:
+                    return False
+        return True
+    
+    def ___getitem__(self,index):
+        return self.rows[index]
+        
+    def __getitem__(self, ij): 
+        '''ij is a tuple (i,j). Allows m[i,j] instead m[i][j]'''
         i,j = ij
         if isinstance(i, int) and isinstance(j, int):
             return self.rows[i][j]
@@ -33,11 +38,12 @@ class Matrix:
             return M
         else:
             return NotImplemented
-
-    def __setitem__(self, ij, val): #ij is a tuple (i,j). Allows m[i,j] instead m[i][j]
+    
+    def __setitem__(self, ij, val): 
+        '''ij is a tuple (i,j). Allows m[i,j] instead m[i][j]'''
         i,j = ij
         if isinstance(i,int) and isinstance(j,int):
-            assert isinstance(val, (int, float, complex))
+            #assert isinstance(val, (int, float, complex))
             self.rows[i][j] = val
         elif isinstance(i,slice) and isinstance(j,slice):
             assert isinstance(val, Matrix)
@@ -48,12 +54,22 @@ class Matrix:
                 s_row[j] = v_row
         else:
             return NotImplemented
-
-    # arithmetic operations
-    ########################
-    def entrywise_op(self, other, op):
-        if not isinstance(other, Matrix):
-            return NotImplemented
+    
+    def __str__(self):
+        return '\n'.join([ str(row) for row in self.rows ])
+    
+    def __add__(self, other):
+        return self._entrywise_op(other, lambda x,y: x + y)
+       
+    def __sub__(self, other):
+        return self._entrywise_op(other, lambda x,y: x - y)
+    
+    def __neg__(self):
+        n,m = self.dim()
+        return Matrix(n,m,0) - self        
+    
+    def _entrywise_op(self, other, op):
+        assert isinstance(other, Matrix)
         assert self.dim() == other.dim()
         n,m = self.dim()
         M = Matrix(n,m)
@@ -61,74 +77,33 @@ class Matrix:
             for j in range(m):
                 M[i,j] = op(self[i,j], other[i,j])
         return M
-
-    def __add__(self, other):
-        return self.entrywise_op(other,lambda x,y:x+y)
-
-
-    def __sub__(self, other):
-        return self.entrywise_op(other,lambda x,y:x-y)
+        
     
-    def __neg__(self):
-        n,m = self.dim()
-        return Matrix(n,m) - self
-
-
     def __mul__(self, other):
-        if isinstance(other, Matrix):
-            return self.multiply_by_matrix(other)
-        elif isinstance(other, (int, float, complex)):
-            return self.multiply_by_scalar(other)
+        '''multilpy by scalar or another matrix'''
+        n,m = self.dim()
+        if isinstance(other, (float, int)):
+            return self._entrywise_op(Matrix(n,m,other), lambda x,y: x * y)
+        elif isinstance(other, Matrix):
+            return self._entrywise_op(other, lambda x,y: x * y)
         else:
             return NotImplemented
-
-    __rmul__ = __mul__
         
-    def multiply_by_scalar(self, val):
-        n,m = self.dim()
-        return self.entrywise_op(Matrix(n,m,val), lambda x,y :x*y)
-###a more efficient version, memory-wise. 
-##        n,m = self.dim()
-##        M = Matrix(n,m)
-##        for i in range(n):
-##            for j in range(m):
-##                M[i,j] = self[i,j] * val
-##        return M
-
-    def multiply_by_matrix(self, other):
-        assert isinstance(other, Matrix)
-        n,m = self.dim()
-        n2,m2 = other.dim()
-        assert m == n2
-        M = Matrix(n,m2)
-        for i in range(n):
-            for j in range(m2):
-                M[i,j] = sum(self[i,k] * other[k,j] for k in range(m))
-        return M
-
-
-    # Input/output
-    ###############
+    __rmul__ = __mul__
+    
     def save(self, filename):
-        f = open(filename, 'w')
-        n,m = self.dim()
-        print(n,m, file=f)
-        for row in self.rows:
-            for e in row:
-                print(e, end=" ", file=f)
-            print("",file=f) #newline
-        f.close()
-
+        '''save to file'''
+        with open(filename,'w') as fout:
+            print(self, file=fout)
+    
     @staticmethod
     def load(filename):
-        f = open(filename)
-        line = f.readline()
-        n,m = [int(x) for x in line.split()]
-        result = Matrix(n,m)
-        for i in range(n):
-            line = f.readline()
-            row = [int(x) for x in line.split()]
-            assert len(row) == m
-            result.rows[i] = row
-        return result
-
+        '''load from file'''
+        M = Matrix(1,1)
+        M.rows = []
+        with open(filename) as fin:
+            for line in fin:
+                line = line.strip()
+                row = eval(line)
+                M.rows.append(row)
+        return M
