@@ -27,4 +27,4 @@ Some of the notebooks require external packages like NumPy and Matplotlib.
 
 The recitation notebooks are available under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) license.
 
-If you require a different license please contact the [author](mailto:yoavram+github@gmail.com).
+If you require a different license please contact [Yoav](mailto:yoavram+github@gmail.com).
