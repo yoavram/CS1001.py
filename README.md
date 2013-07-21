@@ -1,10 +1,20 @@
 # CS1001.py
 
-Recitation notebooks for [Extended Introduction to Computer Science](http://tau-cs1001-py.wikidot.com/) with Python at Tel-Aviv University, Spring 2013, for recitations by [Yoav Ram](http://www.yoavram.com/).
+Recitation notebooks for the course [*Extended Introduction to Computer Science*](http://tau-cs1001-py.wikidot.com/) with *Python*, given at Tel-Aviv University, Spring 2013. These recitations were given by [Yoav Ram](http://www.yoavram.com/).
 
 * [Recitation 1](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation1.ipynb)
 * [Recitation 2](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation2.ipynb)
 * [Recitation 3](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation3.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
+* [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
 * [Recitation 4](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation4.ipynb)
 
 ## Technical details
