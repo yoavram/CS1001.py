@@ -55,6 +55,14 @@ class Matrix:
         else:
             return NotImplemented
 
+    def copy(self):
+        n,m = self.dim()
+        M = Matrix(n,m)
+        for i in range(n):
+            for j in range(m):
+                M[i,j] = self[i,j]
+        return M
+        
     # arithmetic operations
     ########################
     def entrywise_op(self, other, op):
