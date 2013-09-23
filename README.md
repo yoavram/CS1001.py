@@ -1,6 +1,6 @@
 # CS1001.py
 
-Recitation notebooks for the course [*Extended Introduction to Computer Science*](http://tau-cs1001-py.wikidot.com/) with *Python*, given at Tel-Aviv University, Spring 2013. These recitations were given by [Yoav Ram](http://www.yoavram.com/). The course is given as a first CS course to undergraduate CS students on the first or second semester of the first year of their studies towards a BSc. in Computer Science.
+Recitation notebooks for the course [*Extended Introduction to Computer Science*](http://tau-cs1001-py.wikidot.com/previous-2013b) with *Python*, given at Tel-Aviv University in Spring 2013. These recitations were given by [Yoav Ram](http://www.yoavram.com/). The course is given as a first CS course to undergraduate CS students on the first or second semester of the first year of their studies towards a BSc. in Computer Science.
 
 
 * [Recitation 1](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation1.ipynb): variables, operators, flow control
@@ -10,7 +10,7 @@ Recitation notebooks for the course [*Extended Introduction to Computer Science*
 * [Recitation 5](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation5.ipynb): object-oriented programming, recursion
 * [Recitation 6](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation6.ipynb): recursion, quicksort 
 * [Recitation 7](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation7.ipynb): lambda expression, high-order functions, Matrix class, file handling
-* [Recitation 8](http://nbviewer.ipythoan.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation8.ipynb): hash functions, hash tables, finding reapting substrings
+* [Recitation 8](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation8.ipynb): hash functions, hash tables, finding reapting substrings
 * [Recitation 9](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation9.ipynb): linked list, iterators, generators
 * [Recitation 10](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation10.ipynb): Rabin-Karp algorithm for string matching
 * [Recitation 11](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation11.ipynb): Huffman code
