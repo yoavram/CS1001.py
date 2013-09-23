@@ -1,6 +1,6 @@
 # CS1001.py
 
-Recitation notebooks for the course [*Extended Introduction to Computer Science*](http://tau-cs1001-py.wikidot.com/) with *Python*, given at Tel-Aviv University, Spring 2013. These recitations were given by [Yoav Ram](http://www.yoavram.com/). The course is given as a first CS course to undergraduate CS students on the first or second semester of the first year of their studies towards a BSc. in Computer Science.
+Recitation notebooks for the course [*Extended Introduction to Computer Science*](http://tau-cs1001-py.wikidot.com/previous-2013b) with *Python*, given at Tel-Aviv University in Spring 2013. These recitations were given by [Yoav Ram](http://www.yoavram.com/). The course is given as a first CS course to undergraduate CS students on the first or second semester of the first year of their studies towards a BSc. in Computer Science.
 
 
 * [Recitation 1](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation1.ipynb): variables, operators, flow control
