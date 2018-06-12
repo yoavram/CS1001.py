@@ -10,7 +10,7 @@ Recitation notebooks for the course [*Extended Introduction to Computer Science*
 * [Recitation 5](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation5.ipynb): object-oriented programming, recursion
 * [Recitation 6](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation6.ipynb): recursion, quicksort 
 * [Recitation 7](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation7.ipynb): lambda expression, high-order functions, Matrix class, file handling
-* [Recitation 8](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation8.ipynb): hash functions, hash tables, finding reapting substrings
+* [Recitation 8](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation8.ipynb): hash functions, hash tables, finding repeating substrings
 * [Recitation 9](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation9.ipynb): linked list, iterators, generators
 * [Recitation 10](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation10.ipynb): Rabin-Karp algorithm for string matching
 * [Recitation 11](http://nbviewer.ipython.org/urls/raw.github.com/yoavram/CS1001.py/master/recitation11.ipynb): Huffman code
